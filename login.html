@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      animation: fadeIn 1.5s ease;
+    }
+
+    .form-container {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      max-width: 400px;
+      width: 100%;
+      animation: slideUp 1s ease;
+      transition: transform 0.3s ease;
+    }
+
+    .form-container:hover {
+      transform: scale(1.02);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin: 0.5rem 0 0.2rem;
+      color: #444;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 0.7rem;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    input[type="text"]:focus,
+    input[type="password"]:focus {
+      border-color: #667eea;
+      box-shadow: 0 0 5px rgba(102, 126, 234, 0.5);
+      outline: none;
+    }
+
+    input[type="submit"] {
+      margin-top: 1rem;
+      width: 100%;
+      padding: 0.75rem;
+      background-color: #667eea;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #5a67d8;
+      transform: scale(1.02);
+    }
+
+    .switch-link {
+      text-align: center;
+      margin-top: 1rem;
+      color: #333;
+    }
+
+    .switch-link a {
+      color: #667eea;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .switch-link a:hover {
+      color: #5a67d8;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .form-container {
+        margin: 0 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Login </h2>
+    <form method="POST" action="login" id="loginForm">
+      <label>Username:</label>
+      <input type="text" name="username" required><br><br>
+
+      <label>Password:</label>
+      <input type="password" name="password" required><br><br>
+
+      <input type="submit" value="Login">
+      <p class="switch-link">Already have an account? <a href="signup.html">Sign Up</a></p>
+    </form>
+  </div>
+  
+</body>
+</html>
